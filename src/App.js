@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { Component } from 'react';
 import './App.css';
 
@@ -24,10 +23,9 @@ constructor(){
      },
      {
       name: "James",
-      id: '23sdafar234asdf'
-
+      id: '23sdafar234asdf',
      },
-   ]
+   ],
   };
 }
 
