@@ -8,34 +8,35 @@ constructor(){
   super();
 
   this.state = {
-    name: {firstName: 'Gabe', lastName: 'Town'},
-    company: 'Town of Gabriel'
-  }
+   monsters: [
+    {
+      name: 'Linda',
+      id: '23sdafar234',
+     },
+     {
+      name: "Frank",
+      id: '23sdafa4',
+
+     },
+     {
+      name: "Jacky",
+      id: '23afar234',
+     },
+     {
+      name: "James",
+      id: '23sdafar234asdf'
+
+     },
+   ]
+  };
 }
 
 render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hi {this.state.name.firstName} {this.state.name.lastName}, I work at {this.state.company}</p>
-        {/* <button onClick={() => {this.setState({name: {firstName: 'Timmy', lastN{name: {firstName: 'Timmy', lastName: 'Time'}})}}>change name</button> */}
-        
-        <button onClick={() => {
-          this.setState(
-            () => {
-              return {
-                name: {firstName: 'Timmy', lastName: 'Time'},
-              }
-            }, 
-            // callback function
-            () => {
-              console.log(this.state)
-            }
-          );
-        }}
-        >change name</button>
-      </header>
+      {this.state.monsters.map((monster) => {
+        return <h1 key={monster.id}>{monster.name}</h1>;
+      })}
     </div>
   );
 }
