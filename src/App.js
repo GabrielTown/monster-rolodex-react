@@ -47,16 +47,15 @@ render(){
 
   return (
     <div className="App">
-      
-      {/* {filteredMonsters.map((monster) => {
-        return <h1 key={monster.id}>{monster.name}</h1>
-      })} */}
+
       <SearchBox 
         onChangeHandler={onSearchChange} 
         placeholder='search monsters'
-        className='search-box'
+        className='monster-search-box'
       />
+      
       <CardList monsters={filteredMonsters}/>
+
     </div>
   )
 }
