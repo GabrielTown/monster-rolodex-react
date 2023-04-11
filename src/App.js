@@ -10,7 +10,7 @@ const App = () => {
   const [monsters, setMonsters] = useState([])
   const [filteredMonsters, setFilteredMonsters] = useState(monsters)
 
-  console.log('render')
+  // console.log('render')
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -24,7 +24,7 @@ const App = () => {
     })
 
     setFilteredMonsters(newFilteredMonsters)
-  }, [monsters, searchField])
+  }, [monsters, searchField]) //call this when monsters or searchField changes
 
 
   const onSearchChange = (e) => {
@@ -32,7 +32,6 @@ const App = () => {
     setSearchField(searchFieldString)
   }
 
-  
   
   return (
     <div className="App">
